@@ -17,7 +17,7 @@ exports.findOne = async(req,res)=>{
   const username = req.params.username
 
   try {
-    const result = User.findOne({username:username}, {username:1, products:1, _id:0})
+    const result = await User.findOne({username:username}, {username:1, products:1, _id:0})
     res.status(200).json({status:true, data: result})
   } catch (error) {
     console.log("Problem in finding user's product", error)
