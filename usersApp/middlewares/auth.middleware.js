@@ -1,24 +1,40 @@
 const jwt = require('jsonwebtoken')
-
+const authService = require('../services/auth.service')
 
 function verifyToken(req,res,next) {
   const authHeader = req.headers['authorization']
-  const token = authHeader && authHeader.split('')[1]
+  const token = authHeader && authHeader.split(' ')[1]
 
   if(!token){
     return res.status(401).json({status: false, message : "Access Denied. No token privided"})
   }
 
-  const secret = process.env.TOKEN_SECRET
+  const result =  authService.verifyAccessToken(token)
 
-  try {
-      const decoded = jwt.verify(token, secret)
-      console.log(decoded)
-      next()
-  } catch (error) {
-    return res.status(403).json({status : false, data : error})
+  if(!result.verified){
+      return res.status(403).json({status : false, data : result.data})
   }
+   
 
+  req.user = result.data
+  next()
 }
 
-module.exports = { verifyToken}
+
+function verifyRoles(allowedRole){
+  return (req, res, next)=>{
+    if(!req.user || !req.user.roles){
+      return res.status(403).json({status: false, data : "Forbidden: no roles found"})
+    }
+
+    const userRoles = req.user.roles
+    const hasPermition = userRoles.includes(allowedRole)
+
+    if(!hasPermition){
+      return res.status(403).json({status : false, data: "Forbidden: insufficient permissons"})
+    }
+    next()
+  }
+}
+
+module.exports = { verifyToken , verifyRoles}

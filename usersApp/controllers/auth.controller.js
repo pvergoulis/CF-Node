@@ -12,7 +12,9 @@ exports.login = async(req, res)=>{
   const password = req.body.password
 
   try {
-    const result = await User.findOne({username: username})
+    const result = await User.findOne({username: username}, {username : 1, email : 1, password: 1, roles: 1})
+
+    // password = 12345 και result.password = cryptoPassword
     const isMatch = await bcrypt.compare(password, result.password)
 
     // if(result && result.username === username && result.password === password)
