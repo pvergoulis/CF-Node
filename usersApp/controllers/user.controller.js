@@ -73,8 +73,8 @@ exports.update = async (req,res)=>{
     surname: req.body.name,
     email : req.body.email,
     address : {
-      area : req.body.area,
-      road: req.body.road
+      area : req.body.address.area,
+      road: req.body.address.road
     }
   }
   try {
