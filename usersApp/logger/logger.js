@@ -32,7 +32,8 @@
 //   transports: [new transports.Console()]
 // })
 
-
+// // For jests test
+// require('dotenv').config()
 
 //Third Example
 

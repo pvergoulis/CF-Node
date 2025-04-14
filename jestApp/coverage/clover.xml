@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1744221106401" clover="3.2.0">
-  <project timestamp="1744221106401" name="All files">
+<coverage generated="1744643924582" clover="3.2.0">
+  <project timestamp="1744643924582" name="All files">
     <metrics statements="6" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="1" elements="10" coveredelements="4" complexity="0" loc="6" ncloc="6" packages="1" files="1" classes="1"/>
     <file name="index.js" path="C:\Users\vergo\Desktop\Node CF - 7\CF-Node\jestApp\index.js">
       <metrics statements="6" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="1"/>
       <line num="1" count="1" type="stmt"/>
-      <line num="4" count="1" type="stmt"/>
+      <line num="4" count="2" type="stmt"/>
       <line num="8" count="0" type="stmt"/>
       <line num="12" count="0" type="stmt"/>
       <line num="16" count="0" type="stmt"/>

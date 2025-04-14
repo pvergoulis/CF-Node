@@ -1,0 +1,11 @@
+{"label":"My Label for Products App","level":"error","message":" Problem in reading all users Operation `users.find()` buffering timed out after 10000ms","stack":"MongooseError: Operation `users.find()` buffering timed out after 10000ms\n    at Timeout.<anonymous> (C:\\Users\\vergo\\Desktop\\Node CF - 7\\CF-Node\\usersApp\\node_modules\\mongoose\\lib\\drivers\\node-mongodb-native\\collection.js:187:23)\n    at listOnTimeout (node:internal/timers:594:17)\n    at processTimers (node:internal/timers:529:7)","timestamp":"14/04/2025 19:17:1212"}
+{"label":"My Label for Products App","level":"info","message":"Success in reading all users","timestamp":"14/04/2025 19:18:4545"}
+{"label":"My Label for Products App","level":"info","message":"Success in reading all users","timestamp":"14/04/2025 19:23:3939"}
+{"label":"My Label for Products App","level":"info","message":"Success in reading all users","timestamp":"14/04/2025 19:24:5454"}
+{"label":"My Label for Products App","level":"info","message":"Success in reading all users","timestamp":"14/04/2025 20:00:5656"}
+{"label":"My Label for Products App","level":"info","message":"Success in reading all users","timestamp":"14/04/2025 20:31:2929"}
+{"label":"My Label for Products App","level":"info","message":"Success in reading all users","timestamp":"14/04/2025 20:32:4040"}
+{"label":"My Label for Products App","level":"info","message":"Success in reading all users","timestamp":"14/04/2025 20:53:5151"}
+{"label":"My Label for Products App","level":"info","message":"Success in reading all users","timestamp":"14/04/2025 20:56:4141"}
+{"label":"My Label for Products App","level":"info","message":"Success in reading all users","timestamp":"14/04/2025 21:01:3838"}
+{"label":"My Label for Products App","level":"info","message":"Success in reading all users","timestamp":"14/04/2025 21:02:4646"}

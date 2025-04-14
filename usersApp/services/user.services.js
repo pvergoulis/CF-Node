@@ -12,4 +12,19 @@ function findOne(username){
 }
 
 
-module.exports = { findAll , findOne}
+
+async function findLasInsertedUser(){
+  console.log('Find last inserted user')
+
+    try {
+      const result = await User.find().sort({_id:-1}).limit(1)
+      console.log("Success in finding user ",result[0])
+      return result[0]
+    } catch (error) {
+      console.log(`Problem in finding last inserted user ${error}`)
+      return false
+    }
+}
+
+
+module.exports = { findAll , findOne, findLasInsertedUser}
